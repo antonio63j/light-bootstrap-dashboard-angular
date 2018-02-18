@@ -22,6 +22,9 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { UpgradeComponent } from './upgrade/upgrade.component';
 import { LoginComponent } from './login/login.component';
 
+import {ReactiveFormsModule} from '@angular/forms';
+import { RegistroComponent } from './registro/registro.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +36,8 @@ import { LoginComponent } from './login/login.component';
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
-    LoginComponent
+    LoginComponent,
+    RegistroComponent
 
   ],
   imports: [
@@ -45,6 +49,7 @@ import { LoginComponent } from './login/login.component';
     SidebarModule,
     RouterModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     LbdModule
   ],
   providers: [],

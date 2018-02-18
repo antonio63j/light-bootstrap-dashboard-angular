@@ -1,24 +1,24 @@
 <div class="main-content">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-3">
+      <div class="col-sm-6">
         <div class="card">
           <div class="header">
-            <h4 class="title">Login</h4>
+            <h4 class="title">Registro</h4>
           </div>
           <div class="content">
-            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
 
                     <label for="usuario">Usuario</label>
-                    <i class="fa fa-check-circle check" *ngIf="loginForm.controls.usuario.valid"></i>
-                    <i class="fa fa-exclamation-circle uncheck" *ngIf="loginForm.controls.usuario.invalid &&
-                      loginForm.controls.usuario.touched"></i>
+                    <i class="fa fa-check-circle check" *ngIf="registroForm.controls.usuario.valid"></i>
+                    <i class="fa fa-exclamation-circle uncheck" *ngIf="registroForm.controls.usuario.invalid &&
+                      registroForm.controls.usuario.touched"></i>
                     <input type="text" class="form-control" placeholder="tu identificador de usuario" id="usuario" formControlName="usuario">
-                    <p class="alert alert-danger" *ngIf="loginForm.controls.usuario.invalid &&
-                  loginForm.controls.usuario.touched">
+                    <p class="alert alert-danger" *ngIf="registroForm.controls.usuario.invalid &&
+                  registroForm.controls.usuario.touched">
                       El campo Usuario debe tener un mínimo de 8 y un máximo de 18 posiciones.
                     </p>
 
@@ -29,12 +29,12 @@
                 <div class="col-md-10">
                   <div class="form-group">
                     <label for=password>Password</label>
-                    <i class="fa fa-check-circle check" *ngIf="loginForm.controls.password.valid"></i>
-                    <i class="fa fa-exclamation-circle uncheck" *ngIf="loginForm.controls.password.invalid &&
-                      loginForm.controls.password.touched"></i>
+                    <i class="fa fa-check-circle check" *ngIf="registroForm.controls.password.valid"></i>
+                    <i class="fa fa-exclamation-circle uncheck" *ngIf="registroForm.controls.password.invalid &&
+                      registroForm.controls.password.touched"></i>
                     <input type="text" class="form-control" placeholder="tu password" id="password" formControlName="password">
-                    <p class="alert alert-danger" *ngIf="loginForm.controls.password.invalid &&
-                      loginForm.controls.password.touched">
+                    <p class="alert alert-danger" *ngIf="registroForm.controls.password.invalid &&
+                      registroForm.controls.password.touched">
                       El campo password es obligatorio.
                     </p>
                   </div>
@@ -44,12 +44,12 @@
                 <div class="col-md-10">
                   <div class="form-group">
                     <label for=passwordConfirm>Confirma password</label>
-                    <i class="fa fa-check-circle check" *ngIf="loginForm.controls.passwordConfirm.valid"></i>
-                    <i class="fa fa-exclamation-circle uncheck" *ngIf="loginForm.controls.passwordConfirm.invalid &&
-                      loginForm.controls.passwordConfirm.touched"></i>
+                    <i class="fa fa-check-circle check" *ngIf="registroForm.controls.passwordConfirm.valid"></i>
+                    <i class="fa fa-exclamation-circle uncheck" *ngIf="registroForm.controls.passwordConfirm.invalid &&
+                      registroForm.controls.passwordConfirm.touched"></i>
                     <input type="text" class="form-control" placeholder="tu passwordConfirm" id="passwordConfirm" formControlName="passwordConfirm">
-                    <p class="alert alert-danger" *ngIf="loginForm.controls.passwordConfirm.invalid &&
-                      loginForm.controls.passwordConfirm.touched">
+                    <p class="alert alert-danger" *ngIf="registroForm.controls.passwordConfirm.invalid &&
+                      registroForm.controls.passwordConfirm.touched">
                       La confirmación de password es obligatoria
                     </p>
                   </div>
@@ -57,12 +57,11 @@
               </div>
 
 
-              <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Iniciar sesiónr</button>
-              <a class="btn btn-primary" routerLink="/registro">Registrarse</a>
+              <button type="submit" class="btn btn-primary" [disabled]="!registroForm.valid">Aceptar</button>
               <a class="btn btn-danger" routerLink="/dashboard">Cancelar</a>
               <br>
               <br>
-              <p class="alert alert-danger" *ngIf="!loginForm.valid">
+              <p class="alert alert-danger" *ngIf="!registroForm.valid">
                 Por favor complete todos los campos
               </p>
 
